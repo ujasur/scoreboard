@@ -17,4 +17,4 @@ Teams and their preferences should be put at `./config/teams.json`. For example,
 ### Bundle everything.
 * `make` - it compiles backend and ui, puts all necessary asset files into `artifact` folder.
 
-![Alt text](./screenshot.jpg?raw=true "Example")
+![Alt text](./screenshot.png?raw=true "Example")
