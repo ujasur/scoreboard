@@ -1,0 +1,8 @@
+{
+  "Example": { 
+    "port": 8000,
+    "preference": {
+      "primary_aggr_func": "average"
+    }
+  }
+}

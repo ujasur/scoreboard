@@ -1,0 +1,41 @@
+[[template "base" .]]
+[[define "title"]] Users [[end]]
+[[define "style"]]
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" crossorigin="anonymous">  
+[[end]]
+[[define "content"]]
+<script src="/static/auth.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<div class="row">
+  <div class="col-md-5">
+    <div class="box p-2 p-md-3 m-md-3 rounded view-max">
+      <h6 class="mb-3">New Voter <small class="float-right">max [[index .Data "links"]] users</small></h6>
+      <div class="input-group mb-3">
+        <input id="NewUserInput" type="text" class="form-control"
+          placeholder="New voter name without spaces" aria-label="New user name without spaces">
+        <div class="input-group-append">
+          <button class="btn btn-success btn-sm px-3" id="NewUserBtn" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="#fff">
+              <path fill-rule="evenodd"
+                d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z">
+              </path>
+            </svg></button>
+          </button>
+        </div>
+      </div>
+      <div id="VotersContainer">
+        <div class="d-flex justify-content-center">
+          <div class="spinner-grow text-primary" role="status">
+            <span class="sr-only">Loading users...</span>
+          </div>
+        </div>
+      </div>
+      <div id="MastersContainer"></div>
+    </div>
+  </div>
+</div>
+[[end]]
+[[define "js"]]
+  <script src="/static/users.js"></script>
+[[end]]

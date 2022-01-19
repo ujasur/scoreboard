@@ -1,0 +1,15 @@
+p, scrum_master, users, add@voter, allow
+p, scrum_master, users, remove@voter, allow
+
+p, scrum_master, links, add, allow
+p, scrum_master, links, remove, allow
+
+p, scrum_master, session, ., allow
+p, scrum_master, session, vote, deny
+p, scrum_master, session, open, allow
+p, scrum_master, session, close@other, allow
+
+p, voter, session, open, allow
+p, voter, session, vote, allow
+p, voter, session, reset, allow
+p, voter, session, close@other, deny

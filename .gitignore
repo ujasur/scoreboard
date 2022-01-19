@@ -1,0 +1,5 @@
+scoreboard*
+test.db*
+artifact
+node_modules
+.DS_Store

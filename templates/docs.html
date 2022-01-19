@@ -1,0 +1,72 @@
+[[template "base" .]]
+[[define "title"]] Documentation [[end]]
+[[define "style"]]
+  <style>
+  .badge {
+    min-width: 58px;
+  }
+  .leader-mention {
+    color: #ff8973;
+  }
+  .doc-callout {
+    min-width: 58px;
+    color: #b3ccff;
+    display: inline-block;
+    padding: .25em .4em;
+    font-weight: 400;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: baseline;
+  }
+  #DocsPage li {
+    margin-bottom: 0.4em;
+  }    
+  </style>
+[[end]]
+[[define "content"]]
+  <div id="DocsPage" class="p-2 mx-md-3 my-3">
+    <h6>Basic rules</h6>
+    <p class="mb-4">
+      Team consist of the <span class="font-weight-bold">master</span> and many <span class="font-weight-bold">voters</span>. Only voters can participate in voting. </br>
+      All usernames must be unique. Password for each user is his username (for simplicity). </br>
+      Initially team has a master user with password <b>master</b>, who can add team members. 
+    </p>    
+    <h6>Permissions</h6>
+    <div class="mb-4">
+        <h6><span class="doc-callout">Master</span></h6>
+        <ul>
+          <li>Add/Remove users</li>
+          <li>Open session</li>
+          <li>Close session</li>
+          <li>Reset session</li>
+          <li>See voters' scores</li>      
+        </ul>
+    
+        <h6><span class="doc-callout">Voter</span></h6>
+        <ul>
+          <li>Open session</li>
+          <li>Close session</li>
+          <li>Reset session</li>
+          <li>Vote in session</li>
+        </ul>    
+    </div>
+    
+    <h6>Session rules</h6>
+    <div>
+      <div class="mb-2"><span class="doc-callout">Open</span> User who opened a session becomes <span class="leader-mention">leader</span> <span class="leader-badge">&#x02605;</span></div>
+      <div class="mb-2"><span class="doc-callout">Reset</span> Only session <span class="leader-mention">leader</span> is allowed</div>
+      <div class="mb-2"><span class="doc-callout">Vote</span> Only voter is allowed</div>  
+      <div>
+        <div class="mb-2">
+          <span class="doc-callout">Close</span> If any of the following is true:
+        </div>
+        <ul>
+          <li>If you are master (regardless of session <span class="leader-mention">leader</span>).</li>
+          <li>If you are <span class="leader-mention">leader</span>. </li>
+          <li>Any user after <span class="badge badge-pill badge-info">[[index .Data "leaderLife"]] hour</span> of <span class="leader-mention">leader</span> inactivity</li>            
+        </ul>
+      </div> 
+    </div>
+  </div>  
+
+[[end]]

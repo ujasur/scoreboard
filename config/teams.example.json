@@ -1,0 +1,26 @@
+{
+  // Name of the team.
+  "Example": { 
+    // Port of the team
+    "port": 8000, 
+    // How long to wait for a session leader inactivity before giving session control to anyone. 
+    // example: 1m, 1h.
+    "leader_max_idle_period": "1h",
+
+    // All preference are optional
+    "preference": {
+      // How to compute overall score after all team members have given their votes.
+      // Options:
+      //  + "average". Average of all votes.
+      //  + "fib" - Closest fib number to the average.
+      // @default "average".
+      "primary_aggr_func": "average", 
+      // Max length fibonacci sequences. 
+      // @default 14.
+      "max_fib": 14, 
+      // How big variance of scores are allowed. Difference between fib sequences of min score and max score.        
+      // @default 3.
+      "out_of_bucket_limit": 3
+    }
+  }
+}

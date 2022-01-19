@@ -1,0 +1,43 @@
+[[template "base" .]]
+[[define "title"]] Links [[end]]
+[[define "style"]]
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" crossorigin="anonymous">  
+[[end]]
+[[define "content"]]
+<div class="row">
+  <div class="col-md-5"> 
+    <div class="box p-2 p-md-3 m-md-3 rounded view-max">
+      <h6 class="mb-3">New Link <small class="float-right">max. [[index .Data "links"]] links</small></h6>
+      <div class="form">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input id="InputName" type="text" class="form-control" placeholder="Name">
+          </div>
+          <div class="form-group col-md-6">
+            <input id="InputUri" type="url" class="form-control" placeholder="Url">
+          </div>
+        </div>
+        <div class="text-center">
+          <button id="CreateLinkBtn" class="btn btn-block btn-success">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="#fff"><path fill-rule="evenodd" d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"></path></svg>
+          </button>
+        </div>
+      </div>
+      <hr>
+      <div id="LinksContainer">
+        <div class="d-flex justify-content-center">
+          <div class="spinner-grow text-primary" role="status">
+            <span class="sr-only">Loading links...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+[[end]]
+[[define "js"]]
+<script src="/static/auth.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="/static/links.js"></script>
+[[end]]

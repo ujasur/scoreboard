@@ -1,0 +1,111 @@
+  #SessionPage {
+    max-width: 1500px;
+  }
+  .btn-score {
+    padding-right: 16px;
+    padding-left: 16px;    
+    color: #e1e5e8;
+    background-color: #334375;
+    font-weight: 500;
+    margin-right: 3px;
+  }
+  .btn-score:hover,
+  .btn-score:active {
+    background-color: #4862bb;
+    color: #fff;
+  }
+  .btn-score-control {
+    color: #05bbd8;
+  }
+  .btn-close {
+    color: #fff;
+    background-color: initial;
+    padding: 8px;
+    border: 1px solid #233466;
+    max-width: 8em;
+    font-weight: 500;
+    margin: auto;
+  }
+  .btn-close:hover {
+    color: #81e1ff;  
+    background-color: #2d3552;
+  }
+  .voter-name, .overlimit {
+    color: #f79c8b;
+  }
+  .user-vote {
+    padding: 12px !important;
+    margin-bottom: .5rem!important;
+    border-radius: 4px !important;
+    border: 1px solid #233466;
+    background: #101730;
+  }
+  .badge-score {
+    color: #e1e5e8;
+    background-color: #000000;
+    margin-left: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    vertical-align: middle;
+  }
+  .fibboard .btn-score {
+    margin-top: 9px;
+  }
+  .result-view .badge-score {
+    background-color: #334375;
+    margin-left: 3px;
+  }
+  .result-view .badge {
+    font-size: 11px;
+  }  
+  .progress {
+    position: relative;
+    height: 11px;
+    border-radius: 3px;
+    background-color: #233466;
+  }
+  .progress-bar {
+    background: #3069f0;
+  }
+  .progress .skip-count {
+    margin-left: 7px;
+    font-size: 9px;
+    text-align: left;
+    line-height: 9px;
+  }
+  .session-name {
+    width: 100%;
+    position: relative;
+    color: #83fff5;
+  }
+  .session-name,
+  .primary-result-ready {
+    padding: .25rem 0;
+  }
+  .pink .session-name {
+    color: #ff8973;
+  }
+  .purple .session-name {
+    color: #f5a9ee;
+  }
+
+  #UnmaskBtn {
+    cursor: pointer;
+  }
+  #UnmaskBtn:hover {
+    background-color: red;
+  }
+  .agg-value {
+    padding: 0 0.5rem;
+    color: #e1e5e8;    
+  }
+  .result-view .badge {
+    font-weight: 500;
+  }
+  .text-black {
+    color: #000000;
+  }
+  .action-desc {
+    color: #a6afd2;
+  }
